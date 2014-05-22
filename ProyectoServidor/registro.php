@@ -7,10 +7,10 @@ $json = array();
     Registrando el dispositivo del usuario
     guardamos el id de registro(registration id) en la tabla de usuarios
  ----*/
-if (isset($_GET["name"]) && isset($_GET["email"]) && isset($_GET["regId"])) {
-    $name = $_GET["name"];
-    $email = $_GET["email"];
-    $gcm_regid = $_GET["regId"]; // GCM ID de Registro
+if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["regId"])) {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $gcm_regid = $_POST["regId"]; // GCM ID de Registro
     // Guardamos lo detalles del usuario en la DB
     include_once 'funciones.php';
     include_once 'GCM.php';
